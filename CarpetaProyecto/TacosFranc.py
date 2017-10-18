@@ -3,7 +3,7 @@ from tomarOrden import *
 from graficasProyecto import *
 
 def main():
-    mensaje= tomarOrden();
+    mensaje= comenzar();
 
     listaOrdenes = llenarClases()
 
