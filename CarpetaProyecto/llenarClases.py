@@ -3,7 +3,7 @@ import json
 from Orden import *
 
 def llenarClases():
-    with open("example.json") as json_file:
+    with open("ordenesJSON.json") as json_file:
          data = json.load(json_file)
 
     ordenes=[]
