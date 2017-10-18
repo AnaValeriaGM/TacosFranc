@@ -6,7 +6,7 @@ from llenarClase import *
 from Orden import *
 from datosGrafica import *
 
-def graficas(lista):
+def graficasProyecto(lista):
          data= datosGrafica(lista)
          tipos=data[0]
          carnes= data[1]
