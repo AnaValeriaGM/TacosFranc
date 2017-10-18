@@ -1,12 +1,13 @@
 from llenarClases import *
 from tomarOrden import *
+from graficasProyecto import *
 
 def main():
-    tomarOrden();
+    mensaje= tomarOrden();
 
     listaOrdenes = llenarClases()
 
-    #Mandar lista ordenes a cada grafica y a la tabla
+    graficas= graficasProyecto(listaOrdenes)
             
 if __name__ == "__main__":
     main()
