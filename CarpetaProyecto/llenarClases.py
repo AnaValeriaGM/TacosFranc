@@ -22,7 +22,7 @@ def llenarClases():
     oc= OrdenCompleta(datetime,request,ordenes,answer)
     return oc
 
-ordenes= llenarClases()
-print(ordenes)
-for i in range(len(ordenes.orden)):
-    print(ordenes.orden[i])
+##ordenes= llenarClases()
+##print(ordenes)
+##for i in range(len(ordenes.orden)):
+##    print(ordenes.orden[i])
