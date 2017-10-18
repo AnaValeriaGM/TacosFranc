@@ -3,6 +3,7 @@ import json
 from Orden import *
 
 def llenarClases():
+    listaOrdenes=[]
     with open("ordenesJSON.json") as json_file:
         data_json = json.load(json_file)
 
@@ -21,7 +22,8 @@ def llenarClases():
             answer=data["answer"]
 
             oc= OrdenCompleta(datetime,request,ordenes,answer)
-            return oc
+            listaOrdenes.append(oc)
+    return listaOrdenes 
 
 ##ordenes= llenarClases()
 ##print(ordenes)
