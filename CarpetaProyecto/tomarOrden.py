@@ -1,6 +1,5 @@
 import boto3
 
-
 def tomarOrden():
 	sqs = boto3.client('sqs')
 
@@ -18,9 +17,9 @@ def tomarOrden():
 
 def escribirJson(ordenes):
 	archivo=open("ordenesJSON","a")
-	for i in ordenes:
-		archivo.write(i + "\n")
-		print(i)
+	for orden in ordenes:
+		archivo.write(orden + "\n")
+		print(orden)
 	archivo.close()
 
 escribirJson(tomarOrden())
