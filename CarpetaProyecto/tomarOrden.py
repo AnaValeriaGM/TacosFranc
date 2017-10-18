@@ -6,6 +6,9 @@ def tomarOrden():
 	response = sqs.receive_message(
     	QueueUrl='https://sqs.us-east-1.amazonaws.com/292274580527/cc406_team4'
 	)
+	
+	if response == None:
+		return
 
 	recibos = []
 	ordenes= []
