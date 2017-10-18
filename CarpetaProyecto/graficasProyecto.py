@@ -2,6 +2,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+from llenarClase import *
+from Orden import *
+from datosGrafica import *
+
+lista= llenarClase()
+data= datosGrafica(lista)
+
 labels = "Asada","Adobada","Cabeza","Lengua","Suadero","Veggie","Tripa"
 fracs = [100/7,100/7,100/7,100/7,100/7,100/7,100/7]
 
