@@ -8,12 +8,18 @@ from datosGrafica import *
 
 lista= llenarClase()
 data= datosGrafica(lista)
+tipos=data[0]
+carnes= data[1]
+ingredientes=data[2]
+
+total_carnes= sum(carnes)
 
 labels = "Asada","Adobada","Cabeza","Lengua","Suadero","Veggie","Tripa"
-fracs = [100/7,100/7,100/7,100/7,100/7,100/7,100/7]
+fracs = [carnes[0]/total_carnes,carnes[1]/total_carnes,carnes[2]/total_carnes,carnes[3]/total_carnes,
+         carnes[4]/total_carnes,carnes[5]/total_carnes,carnes[6]/total_carnes]
 
 N = 5
-cantidad = (1000,1000,1000,1000,1000)
+cantidad = (1000-ingredientes[0],1000-ingredientes[1],1000-ingredientes[2],1000-ingredientes[3],1000-ingredientes[4])
 ind = np.arange(N)    # the x locations for the groups
 width = 0.35       # the width of the bars: can also be len(x) sequence
 
