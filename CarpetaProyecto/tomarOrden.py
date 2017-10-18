@@ -25,7 +25,8 @@ def escribirJson(ordenes):
 		print(orden)
 	archivo.close()
 
-escribirJson(tomarOrden())
+def comenzar():
+	escribirJson(tomarOrden())
 
 #for r in recibos:
    # response = sqs.delete_message(QueueUrl='https://sqs.us-east-1.amazonaws.com/292274580527/cc406_team4',ReceiptHandle=r)
