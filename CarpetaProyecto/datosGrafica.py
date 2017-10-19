@@ -10,7 +10,7 @@ def datosGrafica(listaOrden):
     ingredientes=porIngredientes(l)
 
     datos.append(tipo)
-    datos.appent(carne)
+    datos.append(carne)
     datos.append(ingredientes)
 
     return datos
@@ -18,110 +18,130 @@ def datosGrafica(listaOrden):
 def porTipo(listaOrden):
     contadores= []
     contadorTaco=0
-    contadores.append(contadorTaco)
     for i in listaOrden:
-        if i.orden.tipo == "Taco":
-            contadorTaco+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].tipo == "taco":
+                contadorTaco+=i.orden[j].cantidad
+    contadores.append(contadorTaco)   
     contadorQuesadilla=0
-    contadores.append(contadorQuesadilla)
     for i in listaOrden:
-        if i.orden.tipo == "Quesadilla":
-            contadorQuesadilla+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].tipo == "quesadilla":
+                contadorQuesadilla+=i.orden[j].cantidad
+    contadores.append(contadorQuesadilla)        
     contadorTostada=0
-    contadores.append(contadorTostada)
     for i in listaOrden:
-        if i.orden.tipo == "Tostada":
-            contadorTostada+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].tipo== "tostada":
+                contadorTostada+=i.orden[j].cantidad
+    contadores.append(contadorTostada)       
     contadorMulitas=0
-    contadores.append(contadorMulitas)
     for i in listaOrden:
-        if i.orden.tipo == "Mulitas":
-            contadorMulitas+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].tipo== "mulita":
+                contadorMulitas+=i.orden[j].cantidad
+    contadores.append(contadorMulitas)      
     contadorVampiro=0
-    contadores.append(contadorVampiro)
     for i in listaOrden:
-        if i.orden.tipo == "Vampiro":
-            contadorVampiro+=i.orden.cantidad
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].tipo== "vampiro":
+                contadorVampiro+=i.orden[j].cantidad
+    contadores.append(contadorVampiro)
     return contadores
 
 def porCarne(listaOrden):
     contadores= []
     contadorAsada=0
-    contadores.append(contadorTaco)
     for i in listaOrden:
-        if i.orden.carne == "Asada":
-            contadorAsada+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "asada":
+                contadorAsada+=i.orden[j].cantidad
+    contadores.append(contadorAsada)   
     contadorAdobada=0
-    contadores.append(contadorAdobada)
     for i in listaOrden:
-        if i.orden.carne == "Adobada":
-            contadorAdobada+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "adobada":
+                contadorAdobada+=i.orden[j].cantidad
+    contadores.append(contadorAdobada)   
     contadorCabeza=0
+    for i in listaOrden:
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "cabeza":
+                contadorCabeza+=i.orden[j].cantidad
     contadores.append(contadorCabeza)
-    for i in listaOrden:
-        if i.orden.carne == "Cabeza":
-            contadorCabeza+=i.orden.cantidad
-            
     contadorLengua=0
-    contadores.append(contadorLengua)
     for i in listaOrden:
-        if i.orden.carne == "Lengua":
-            contadorLengua+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "lengua":
+                contadorLengua+=i.orden[j].cantidad
+    contadores.append(contadorLengua)    
     contadorSuadero=0
+    for i in listaOrden:
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "suadero":
+                contadorSuadero+=i.orden[j].cantidad
     contadores.append(contadorSuadero)
-    for i in listaOrden:
-        if i.orden.carne == "Suadero":
-            contadorSuadero+=i.orden.cantidad
-            
     contadorVeggie=0
-    contadores.append(contadorVeggie)
     for i in listaOrden:
-        if i.orden.carne == "Veggie":
-            contadorVeggie+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne == "veggie":
+                contadorVeggie+=i.orden[j].cantidad
+    contadores.append(contadorVeggie)        
     contadorTripa=0
-    contadores.append(contadorTripa)
     for i in listaOrden:
-        if i.orden.carne == "Tripa":
-            contadorTripa+=i.orden.cantidad
+        largo= len(i.orden)
+        for j in range(largo):
+            if i.orden[j].carne== "tripa":
+                contadorTripa+=i.orden[j].cantidad
+    contadores.append(contadorTripa)
     return contadores
 
-def porIngrediente(listaOrden):
+def porIngredientes(listaOrden):
     contadores= []
     contadorCebolla=0
-    contadores.append(contadorCebolla)
     for i in listaOrden:
-        if "Cebolla" in i.orden.ingredientes:
-            contadorCebolla+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if "cebolla" in i.orden[j].ingredientes:
+                contadorCebolla+=i.orden[j].cantidad
+    contadores.append(contadorCebolla)     
     contadorSalsa=0
+    for i in listaOrden:
+        largo= len(i.orden)
+        for j in range(largo):
+            if "salsa" in i.orden[j].ingredientes:
+                contadorSalsa+=i.orden[j].cantidad
     contadores.append(contadorSalsa)
-    for i in listaOrden:
-        if "Salsa" in i.orden.ingredientes:
-            contadorSalsa+=i.orden.cantidad
-            
     contadorCilantro=0
-    contadores.append(contadorCilantro)
     for i in listaOrden:
-        if "Cilantro" in i.orden.ingredientes:
-            contadorCilantro+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if "cilantro" in i.orden[j].ingredientes:
+                contadorCilantro+=i.orden[j].cantidad
+    contadores.append(contadorCilantro)     
     contadorAguacate=0
-    contadores.append(contadorAguacate)
     for i in listaOrden:
-        if "Aguacate" in i.orden.ingredientes:
-            contadorAguacate+=i.orden.cantidad
-            
+        largo= len(i.orden)
+        for j in range(largo):
+            if "aguacate" in i.orden[j].ingredientes:
+                contadorAguacate+=i.orden[j].cantidad
+    contadores.append(contadorAguacate)      
     contadorFrijol=0
-    contadores.append(contadorFrijol)
     for i in listaOrden:
-        if "Frijol" in i.orden.ingredientes:
-            contadorFrijol+=i.orden.cantidad
+        largo= len(i.orden)
+        for j in range(largo):
+            if "frijol" in i.orden[j].ingredientes:
+                contadorFrijol+=i.orden[j].cantidad
+    contadores.append(contadorFrijol)
     return contadores
