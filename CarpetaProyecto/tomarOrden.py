@@ -8,6 +8,7 @@ def tomarOrden():
 	)
 	
 	if response == None:
+		print ("No hay mensajes")
 		return
 
 	recibos = []
