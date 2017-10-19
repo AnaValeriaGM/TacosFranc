@@ -7,8 +7,8 @@ def llenarClases():
     with open("ordenesJSON.json") as json_file:
         data_json = json.load(json_file)
         
-    ordenes=[]
     for data in data_json:
+        ordenes=[]
         datetime=data["datetime"]
         request=data["request_id"]
         for i in range(len(data["orden"])):
