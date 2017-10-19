@@ -1,5 +1,5 @@
 
-from llenarClase import*
+from llenarClases import*
 from Orden import *
 
 def datosGrafica(listaOrden):
