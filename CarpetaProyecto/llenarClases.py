@@ -5,10 +5,10 @@ from Orden import *
 def llenarClases():
     listaOrdenes=[]
     with open("ordenesJSON.json") as json_file:
-        data = json.load(json_file)
+        data_json = json.load(json_file)
         
-        ordenes=[]
-
+    ordenes=[]
+    for data in data_json:
         datetime=data["datetime"]
         request=data["request_id"]
         for i in range(len(data["orden"])):
