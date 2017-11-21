@@ -4,7 +4,7 @@ from graficasProyecto import *
 import sys
 
 def main():
-    mensaje= comenzar();
+    mensajes= comenzar();
 
     listaOrdenes = llenarClases()
 
