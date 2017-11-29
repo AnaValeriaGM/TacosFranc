@@ -16,7 +16,7 @@ This project simulates a taco shop. We have our taco-men, orders that are coming
   - Raul Aragon: @RaulAT
   - Valeria González:  @AnaValeriaGM
   
-### Tech
+### Support
 
 Tacos Franc used the following to work correctly:
 
@@ -110,7 +110,10 @@ We also used other libraries that are already installed in python and only have 
 - Threading
 - Time 
 - Queue
-      
+
+### How it works:
+
+![Alt Text](https://github.com/AnaValeriaGM/TacosFranc/blob/master/finalflow2.png)
 
 
 
