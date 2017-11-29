@@ -1,16 +1,61 @@
 "Tacos El Franc"
+Final Project for Operating Systems
+Group 4
 
-Proyecto final para la materia de Sistemas Operativos
-
-Miembros del equipo 4:
+Group members:
 Raul Aragon
 Ana Gonzalez
 Arturo Lopez
 
-Modulos de python3 necesarios:
-boto3
-numpy
-matplotlib
+Modules used in python3: 
+
+Boto3: It is the amazon web services (AWS) developing software kit (SDK) for python. This module allows python developers to write software that makes use of the amazon services. To install Boto3 we have to write in the terminal:
+              $ pip install boto3 
+Then, we have to set the credentials in an encrypted file: 
+  example: 
+             ~/.aws/credentials 
+             
+  Inside this file we will have: 
+            [default]
+            aws_access_key_id = YOUR_KEY
+            aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+            
+After that we have to set the region in the same encrypted folder , but different file: 
+  example: 
+           ~/.aws/config
+           
+  Inside this file we will have: 
+          [default]
+          region=us-east-1
+ 
+ In python it is important to import boto3 in our file:
+          import boto3
+          
+In our program we used this library to receive taco orders and to send the corresponding response. 
+
+Json: We used the Json library, Json is a way to structure data for it to be interpreted by any language. To use it the only hing we have to do is import it in our python file: 
+      import json
+ 
+Numpy: We used this library because it adds support for large multi-dimension arrays and matrices, along with a large collection of high-level mathematical functionsto operate on these arrays. To install this library we need to write the following: 
+                  pip install "numpy-1.9.2rc1+mkl-cp34-none-win_amd64.whl"
+                  
+        Then, add in our python file "import numpy" to use it. 
+        
+Matplotlib: This library was used to plot, make graphs and tables. To install it we did: 
+            Debian / Ubuntu : sudo apt-get install python-matplotlib
+            Windows:  python -m pip install -U pip setuptools
+                      python -m pip install matplotlib
+             In our python files (where we did our graphs) we imported this library as: 
+                      import matplotlib.pyplot
+
+We also used other libraries that are already installed in python and only have to be imported to the files in hich they will be used like: 
+      Threading
+      Time 
+      Queue
+  
+                      
+           
+ 
 
 
 
