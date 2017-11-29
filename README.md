@@ -104,12 +104,12 @@ In our python files (where the graphs were made) we imported this library as:
       import matplotlib.pyplot
 ```
 
-[Others]
+#### Others
 
 We also used other libraries that are already installed in python and only have to be imported to the files in which they will be used like: 
-      - Threading
-      - Time 
-      - Queue
+- Threading
+- Time 
+- Queue
       
 ### Docker
 Dillinger is very easy to install and deploy in a Docker container.
