@@ -12,9 +12,9 @@ This project simulates a taco shop. We have our taco-men, orders that are coming
 
 # Authors:
 
-  - Arturo Lopez- @Turi57
-  - Raul Aragon- @RaulAT
-  - Valeria González- @AnaValeriaGM
+  - Arturo Lopez: @Turi57
+  - Raul Aragon: @RaulAT
+  - Valeria González:  @AnaValeriaGM
   
 ### Tech
 
@@ -27,15 +27,46 @@ Tacos Franc used the following to work correctly:
 
 ### Installation
 
-Tacos Franc requires [Node.js](https://nodejs.org/) v4+ to run.
+Tacos Franc requires some extra libraries for it to run:  
 
-Install the dependencies and devDependencies and start the server.
+[Boto3](https://github.com/boto/boto3) 
+
+It is the amazon web services (AWS) developing software kit (SDK) for python. This module allows python developers to write software that makes use of the amazon services. To install Boto3 we have to write in the terminal:
 
 ```sh
-$ cd dillinger
-$ npm install -d
-$ node app
+  $ pip install boto3
 ```
+Then, we have to set the credentials in an encrypted file:
+
+```sh
+      ~/.aws/credentials 
+```
+ Inside this file we will have:
+ 
+```sh
+     [default]
+     aws_access_key_id = YOUR_KEY
+     aws_secret_access_key = YOUR_SECRET_ACCESS_KEY         
+```
+
+After that we have to set the region in the same encrypted folder , but different file: 
+
+```sh
+      ~/.aws/config        
+```
+Inside this file we will have: 
+```sh
+      [default]
+      region=us-east-1      
+```
+ In python it is important to import boto3 in our file:
+ 
+```sh
+      import boto3    
+```       
+          
+In our program we used this library to receive taco orders and to send the corresponding response.
+
 
 For production environments...
 
