@@ -67,60 +67,50 @@ Inside this file we will have:
           
 In our program we used this library to receive taco orders and to send the corresponding response.
 
+[Json](https://docs.python.org/2/library/json.html)
 
-For production environments...
+We used the Json library, Json is a way to structure data for it to be interpreted by any language. To use it the only thing we have to do is import it in our python file: 
+```sh
+      import json  
+```   
+ 
+[Numpy](http://www.numpy.org/)
+
+We used this library because it adds support for large multi-dimension arrays and matrices, along with a large collection of high-level mathematical functions to operate on these arrays. To install this library we need to write the following:
+```sh
+       pip install "numpy-1.9.2rc1+mkl-cp34-none-win_amd64.whl"
+```                    
+Then, add it in the python file where it will be used:
 
 ```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
+      import numpy
+```  
+        
+[Matplotlib](https://matplotlib.org/)
 
-### Plugins
-
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
-
-| Plugin | README |
-| ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md] [PlDb] |
-| Github | [plugins/github/README.md] [PlGh] |
-| Google Drive | [plugins/googledrive/README.md] [PlGd] |
-| OneDrive | [plugins/onedrive/README.md] [PlOd] |
-| Medium | [plugins/medium/README.md] [PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md] [PlGa] |
-
-
-### Development
-
-Want to contribute? Great!
-
-Dillinger uses Gulp + Webpack for fast developing.
-Make a change in your file and instantanously see your updates!
-
-Open your favorite Terminal and run these commands.
-
-First Tab:
+This library was used to plot, make graphs and tables. To install it we did: 
+           
+Debian / Ubuntu:
 ```sh
-$ node app
+      sudo apt-get install python-matplotlib
+```  
+Windows: 
+```sh
+      python -m pip install -U pip setuptools
+      python -m pip install matplotlib
+```  
+In our python files (where the graphs were made) we imported this library as: 
+```sh
+      import matplotlib.pyplot
 ```
 
-Second Tab:
-```sh
-$ gulp watch
-```
+[Others]
 
-(optional) Third:
-```sh
-$ karma test
-```
-#### Building for source
-For production release:
-```sh
-$ gulp build --prod
-```
-Generating pre-built zip archives for distribution:
-```sh
-$ gulp build dist --prod
-```
+We also used other libraries that are already installed in python and only have to be imported to the files in which they will be used like: 
+      - Threading
+      - Time 
+      - Queue
+      
 ### Docker
 Dillinger is very easy to install and deploy in a Docker container.
 
