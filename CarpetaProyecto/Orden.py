@@ -15,6 +15,9 @@ class OrdenCompleta:
         self.request= request
         self.orden= orden
         self.answer= answer
+    
+    def __iter__(self):
+        return self
 
     def __str__(self):
         guiones= "--------------------------------------------------"
