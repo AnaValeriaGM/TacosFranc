@@ -1,0 +1,73 @@
+se crea una lista de ingredientes con el valor inicial:
+    "guacamole": 500
+    "cebolla": 500
+    "cilantro": 500
+    "frijoles": 500
+    "salsa": 500
+    "tortillas" : 500
+se crea una lista por tipo de taco con un contador en ceros:
+    "taco" : 0
+    "mulita" : 0
+    "quesadilla" : 0
+    "tostada" : 0
+    "vampiro": 0
+se crea una lista por tipo de carne con contadores en ceros:
+    "asada":0
+    "adobada":0
+    "cabeza":0
+    "lengua":0
+    "suadero":0
+    "veggie":0
+    "tripa":0
+se crea una lista de ingredientes con un contador en ceros:
+    "guacamole": 0
+    "cebolla": 0
+    "cilantro": 0
+    "frijoles": 0
+    "salsa": 0
+
+se crea un queue para cada tipo de carne,
+    queue asada
+    queue adobada
+    queue otros
+se declara la respuesta como un global asset
+se crea una respuesta vacia para usarse despues
+
+se define la funcion de refill
+    cuando se manda a llamar pone una pause por 2 segundos al thread y toma
+    50 de el ingrediente llamado
+
+se define la funcion que define que sub orden se va a cual taquero
+    Se manda a llamar la respuesta
+    mientras la lista de ordenes sean mayor a cero se procede con el proceso
+    por cada orden se leen las subordenes
+    por el tipo de carne se manda al queue del taquero respectivo
+    al terminar la sub orden se manda el tiempo en el que se acabo
+    se le agrega a la respuesta la orden una ves que todas las carnes de las subordenes son completadas
+
+se define la funcion para hacer las ordenes completas
+    si orden es diferente de a Null se checa que:
+        se checa individualmente por ingrediente que sea mayor a cero
+            si algun ingrediente es igual o menor a cero se manda a llamar refill para solo ese
+            ingrediente
+        se checa cuanto de cada ingrediente pide la sub orden
+            si algun ingrediente es menor a lo que se pide se manda a llamar refill para solo ese
+            ingrediente individualmente.
+        se imprime que se termina la orden
+        se imprimen los ingredientes
+    si es null se regresa lista pero vacia la orden
+    
+se define el taquero por su queue y se le da un nombre
+     mientras su orden este vacia busca una nueva
+     si no hay una nueva duerme por 3 segundos'
+     imprime cuando termine
+     
+se define el inicio del processo
+    se obtienen nuevas ordenes
+    se define que taquero agarra que sub orden
+    se inicia cada thread
+    al final unen las subordenes en la orden completa
+
+se manda a llamar el metodo de graficas
+crearGraficas()
+
