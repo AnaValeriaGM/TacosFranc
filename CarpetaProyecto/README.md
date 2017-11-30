@@ -12,9 +12,9 @@ This project simulates a taco shop. We have our taco-men, orders that are coming
 
 # Authors:
 
-  - [Arturo Lopez](https://github.com/Turi57)
-  - Raul Aragon: @RaulAT
-  - Valeria González:  @AnaValeriaGM
+- Arturo Lopez: [Turi57](https://github.com/Turi57)
+- Raul Aragon: [RaulAT](https://github.com/RaulAT)
+- Valeria González: [AnaValeriaGM](https://github.com/AnaValeriaGM)
   
 ### Support
 
