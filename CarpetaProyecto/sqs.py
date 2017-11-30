@@ -28,6 +28,8 @@ def leerSQS():
     else:
         for orden in respuesta["Messages"]:
             listaOrdenes.append(json.loads(orden["Body"]))
+            for r in recibos:
+                response = sqs.delete_message(QueueUrl='https://sqs.us-east-1.amazonaws.com/292274580527/cc406_team4',ReceiptHandle=r
     return listaOrdenes
 
 def escribirSQS(message):
